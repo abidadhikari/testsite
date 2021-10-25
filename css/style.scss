@@ -404,12 +404,43 @@ header {
     line-height: 1.2 !important;
     font-weight: 300 !important;
     &::after {
-        width: 100px;
-        height: 3px;
+      width: 100px;
+      height: 3px;
+      background-color: #00aeef;
+      content: "";
+      display: block;
+      margin: 0.5rem auto;
+    }
+  }
+  ul {
+    list-style-type: none;
+    width: 70%;
+    margin: 2rem 0;
+    li {
+      position: relative;
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0, 0.125);
+      transition: all 0.5s ease;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      &:hover {
+        color: white;
         background-color: #00aeef;
-        content: "";
-        display: block;
-        margin: 0.5rem auto;
+      }
+      h3 {
+        color: #3d3d3d;
+      }
+      b {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(-200%, 200%);
+      }
+      p{
+        margin-top: 1rem;
+        display: none;
+      }
     }
   }
 }

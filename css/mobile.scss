@@ -175,6 +175,16 @@ $base: 0.6rem;
           line-height: 1.2;
       }
   }
+
+  .faqcontainer{
+    h2{
+      font-size: 20px;
+    }
+    ul{
+      margin-top: 2rem;
+      width: 90%;
+    }
+  }
 }
 
 @media screen and (max-width: 780px) {

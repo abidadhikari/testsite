@@ -204,6 +204,13 @@
     font-size: 20px;
     line-height: 1.2;
   }
+  .faqcontainer h2 {
+    font-size: 20px;
+  }
+  .faqcontainer ul {
+    margin-top: 2rem;
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 780px) {

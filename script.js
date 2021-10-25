@@ -24,7 +24,7 @@ window.addEventListener('resize',()=>{
 const nav = document.querySelector("nav");
 const navClone = nav.cloneNode(true);
 mobileNav.appendChild(navClone);
-console.log(mobileNav);
+// console.log(mobileNav);
 
 
 

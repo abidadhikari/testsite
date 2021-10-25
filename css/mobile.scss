@@ -1,0 +1,195 @@
+// scroll down css
+$base: 0.6rem;
+
+.scrolldown {
+  position: absolute;
+  bottom: 8rem;
+}
+.chevron {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #2c3e50;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skewY(30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY($base * 3.8);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY($base * 5.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY($base * 8) scale(0.5);
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  header {
+    .headcontainer {
+      width: 80%;
+      .logo {
+        img {
+          height: 4rem;
+        }
+      }
+      nav {
+        display: none;
+      }
+      .tools {
+        .btn {
+          display: none;
+        }
+        #phonebtn,
+        #barsbtn {
+          display: flex;
+        }
+      }
+    }
+  }
+  .main {
+    max-height: 80vh !important;
+    .carousel {
+      overflow-x: hidden;
+      max-height: 80vh !important;
+
+      .carousels {
+        flex-direction: column;
+        height: 100%;
+      }
+      .modal-txt {
+        width: 90%;
+        margin-bottom: 2rem;
+        h5 {
+          text-transform: uppercase;
+          color: #5c5c5c;
+          margin-bottom: 15px;
+          font-size: small;
+          line-height: 1.4;
+          letter-spacing: 2px;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      .modal {
+        z-index: 10;
+        position: absolute;
+        animation: swipefromleft 0.5s 1s alternate forwards;
+        transform: translateX(-110%);
+        bottom: -50px;
+        left: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        img {
+          height: 210px;
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+        h2 {
+          color: #353535;
+          font-size: 18px;
+          margin-bottom: 1rem;
+        }
+        span {
+          text-transform: uppercase;
+          font-size: 16px;
+          color: #b6b6b6;
+        }
+      }
+    }
+  }
+
+  .intro {
+      margin-top: 6rem;
+    flex-direction: column;
+    .intro-left {
+      width: 90%;
+    }
+    .intro-right {
+      width: 90%;
+    }
+  }
+
+  .gallery-grid{
+      height: auto;
+      flex-direction: column;
+      overflow: hidden;
+    .gallerywrapper{
+        img{
+            height: 400px;
+            width: 400px;
+        }
+    }
+      .gallerywrapper:nth-child(1){
+        transform: translateX(100px) rotatez(-10deg);
+    }
+    .gallerywrapper:nth-child(2){
+        // transform: translate(0);
+        z-index: 11;
+    }
+    .gallerywrapper:nth-child(3){
+        transform: translateX(-100px) rotatez(10deg);
+    }
+  }
+
+  .clientsbox{
+      h2{
+          font-size: 20px;
+          line-height: 1.2;
+      }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  header {
+    .headcontainer {
+      width: 90%;
+    }
+  }
+}
+
+@keyframes swipefromleft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -11,6 +11,15 @@ window.addEventListener("scroll", () => {
   }
 });
 
+window.addEventListener('resize',()=>{
+  const width=window.innerWidth;
+  if (width>1179) {
+    mobileNav.classList.remove("activeNav");
+  }
+})
+
+
+
 //cloning nav elements to reuse for monile nav sidebar
 const nav = document.querySelector("nav");
 const navClone = nav.cloneNode(true);
@@ -32,7 +41,7 @@ closeBars.addEventListener("click", () => {
 const lists = document.querySelectorAll(".lists");
 const contentOfLists = document.querySelectorAll(".lists p");
 const listBtn = document.querySelectorAll(".lists b i");
-console.log(listBtn);
+// console.log(listBtn);
 lists.forEach((e, i) => {
   e.addEventListener("click", () => {
     if (contentOfLists[i].style.display == "block") {

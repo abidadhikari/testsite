@@ -15,6 +15,10 @@ window.addEventListener("scroll", () => {
 const nav = document.querySelector("nav");
 const navClone = nav.cloneNode(true);
 mobileNav.appendChild(navClone);
+console.log(mobileNav);
+
+
+
 
 //toggle mobilenav
 bars.addEventListener("click", () => {

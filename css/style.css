@@ -17,6 +17,15 @@ a {
   text-decoration: none;
 }
 
+.label-before, .contact-container .form form .field input:valid + label::before, .contact-container .form form .field input:focus + label::before {
+  line-height: 20px;
+  font-size: 12px;
+  top: -10px;
+  background: #fff;
+  padding: 0 6px;
+  left: 9px;
+}
+
 .mobile-nav {
   height: 100vh;
   width: 300px;
@@ -61,6 +70,22 @@ a {
   padding: 0.4rem;
 }
 
+.mobile-nav nav ul li:focus-within ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
 .mobile-nav nav ul li a {
   font-size: large;
   padding: 0.5rem 0.8rem;
@@ -74,8 +99,12 @@ a {
   margin: 0 1rem;
 }
 
-.mobile-nav nav ul li a:active::after {
+.mobile-nav nav ul li a:focus-within::after {
   content: "\f0d8";
+}
+
+.mobile-nav nav ul li ul {
+  display: none;
 }
 
 .mobile-nav nav ul li ul li {
@@ -336,6 +365,7 @@ header .headcontainer .tools #barsbtn {
 }
 
 .main .carousel .modal {
+  border-radius: 8px;
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   -webkit-transform: translateX(100%);
@@ -547,12 +577,15 @@ header .headcontainer .tools #barsbtn {
 }
 
 .faqcontainer ul li:hover {
-  color: white;
   background-color: #00aeef;
 }
 
+.faqcontainer ul li:hover h3 {
+  color: white;
+}
+
 .faqcontainer ul li h3 {
-  color: #3d3d3d;
+  color: #555555;
 }
 
 .faqcontainer ul li b {
@@ -568,8 +601,146 @@ header .headcontainer .tools #barsbtn {
   display: none;
 }
 
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-container .location {
+  width: 35%;
+  color: #fff;
+  background-color: #000d45;
+  padding: 5rem;
+}
+
+.contact-container .location h2 {
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+
+.contact-container .location .location-div a {
+  color: rgba(255, 255, 255, 0.747) !important;
+}
+
+.contact-container .form {
+  width: 65%;
+  padding: 5rem;
+}
+
+.contact-container .form h2 {
+  font-size: 36px;
+  color: #000;
+  line-height: 1.2 !important;
+  font-weight: 300 !important;
+}
+
+.contact-container .form h2::after {
+  width: 80px;
+  height: 3px;
+  background-color: #00aeef;
+  content: "";
+  display: block;
+  margin: 35px 0 50px;
+}
+
+.contact-container .form form {
+  width: 80%;
+}
+
+.contact-container .form form .field {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.contact-container .form form .field:last-of-type {
+  margin-top: 3rem;
+}
+
+.contact-container .form form .field textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  padding: 1rem 2rem;
+  color: #222;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+  line-height: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.contact-container .form form .field textarea:focus-within {
+  outline: none;
+  border-color: blue;
+}
+
+.contact-container .form form .field .btn {
+  line-height: 1;
+  color: #fff;
+  font-weight: 400;
+  -webkit-transition: ease-in 0.4s;
+  transition: ease-in 0.4s;
+  font-family: sans-serif;
+  cursor: pointer;
+  padding: 20px;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  border: 2px solid #122472;
+  font-weight: 700 !important;
+  position: relative;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  background-color: #122472;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.contact-container .form form .field .btn:hover {
+  color: #122472;
+  background-color: #fff;
+}
+
+.contact-container .form form .field label::before {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  line-height: 40px;
+  font-size: 14px;
+  color: #777;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+
+.contact-container .form form .field input {
+  width: 100%;
+  line-height: 40px;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.contact-container .form form .field input:focus {
+  outline: 0;
+  border-color: blue;
+}
+
+.contact-container .form form .field input:valid + label::before {
+  content: attr(data-title);
+}
+
+.contact-container .form form .field input:focus + label::before {
+  color: blue;
+}
+
 footer {
-  margin-top: 2rem;
   color: #ffffff;
   background-color: #555555;
   font-family: sans-serif, Arial, Helvetica !important;

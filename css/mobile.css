@@ -211,6 +211,21 @@
     margin-top: 2rem;
     width: 90%;
   }
+  .contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-container .location {
+    width: 100%;
+  }
+  .contact-container .form {
+    width: 100%;
+  }
+  .contact-container .form form {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 780px) {

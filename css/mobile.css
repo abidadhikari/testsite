@@ -216,14 +216,19 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
   }
   .contact-container .location {
     width: 100%;
   }
   .contact-container .form {
     width: 100%;
+    padding: 1rem;
   }
   .contact-container .form form {
+    width: 100%;
+  }
+  .contact-container .form form .field {
     width: 100%;
   }
 }

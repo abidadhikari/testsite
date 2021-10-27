@@ -187,13 +187,20 @@ $base: 0.6rem;
   }
   .contact-container{
     flex-direction: column;
+    width: 100%;
+    
     .location{
       width: 100%;
     }
     .form{
       width: 100%;
+      padding: 1rem;
+
       form{
         width: 100%;
+        .field{
+          width: 100%;
+        }
       }
     }
   }

@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="./css/mobile.css" /> -->
+    <link rel="stylesheet" href="main.css" />
 
     <!-- font awesome cdn  -->
     <link
@@ -17,16 +18,15 @@
     <title>Test site -Abid Adhikari</title>
   </head>
   <body>
-    <div class="mobile-nav">
-      <div id="cross"><i class="fas fa-times"></i></div>
-    </div>
     <header id="header">
       <div class="headcontainer">
         <div class="logo">
-          <img
-            src="https://worldstarmanpower.ae/wp-content/uploads/2021/09/WMP-logo-01.svg"
-            alt="test site logo"
-          />
+          <a href="#">
+            <img
+              src="https://worldstarmanpower.ae/wp-content/uploads/2021/09/WMP-logo-01.svg"
+              alt="test site logo"
+            />
+          </a>
         </div>
         <nav>
           <ul>
@@ -71,7 +71,55 @@
         </div>
       </div>
     </header>
+    <div class="mobile-nav">
+      <div id="cross"><i class="fas fa-times"></i></div>
 
+      <nav>
+        <ul>
+          <li class="mainlink"><a href="#">About Us</a></li>
+          <li class="mainlink">
+            <div class="dropdown">
+              <a>Solutions</a> <i class="fas fa-caret-down"></i>
+            </div>
+            <ul class="subul">
+              <li class="sublink"><a href="#">Blue Collar</a></li>
+              <li class="sublink"><a href="#">White Collar</a></li>
+            </ul>
+          </li>
+          <li class="mainlink">
+            <div class="dropdown">
+              <a>Why Us</a><i class="fas fa-caret-down"></i>
+            </div>
+
+            <ul class="subul">
+              <li class="sublink"><a href="#">Whats sets us apart?</a></li>
+
+              <li class="sublink"><a href="#">Employee Support</a></li>
+              <li class="sublink">
+                <a href="#">Corporate Social Responsibility</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mainlink">
+            <div class="dropdown">
+              <a>Insights</a><i class="fas fa-caret-down"></i>
+            </div>
+            <ul class="subul">
+              <li class="sublink"><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="mainlink">
+            <div class="dropdown">
+              <a>Contact Us</a><i class="fas fa-caret-down"></i>
+            </div>
+            <ul class="subul">
+              <li class="sublink"><a href="#">Get in Touch</a></li>
+              <li class="sublink"><a href="#">Carrers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="main">
       <div class="scrolldown">
         <div class="chevron"></div>
@@ -146,6 +194,36 @@
         all around the UAE.
       </h2>
       <div class="btn1">More Info</div>
+    </div>
+
+    <div class="whatwedo">
+      <h3>WHAT WE DO</h3>
+      <div class="twoimg">
+        <div class="imgdiv">
+          <div class="whatinfo">
+            <h4>Blue Collar Manpower Supply</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Consectetur aliquam enim officia, aliquid expedita rem doloremque
+              autem excepturi esse? Sint, natus! Fugit facere perspiciatis quia
+              illum, sit accusantium itaque optio?
+            </p>
+          </div>
+          <img src="https://picsum.photos/750/500" />
+        </div>
+        <div class="imgdiv">
+          <div class="whatinfo">
+            <h4>Blue Collar Manpower Supply</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Consectetur aliquam enim officia, aliquid expedita rem doloremque
+              autem excepturi esse? Sint, natus! Fugit facere perspiciatis quia
+              illum, sit accusantium itaque optio?
+            </p>
+          </div>
+          <img src="https://picsum.photos/750/501" />
+        </div>
+      </div>
     </div>
 
     <div class="faqcontainer">
@@ -255,10 +333,65 @@
         </form>
       </div>
     </div>
-
+    <div class="searchcontainer" id="searchcontainer">
+      <div class="searchbox">
+        <input type="text" name="search" id="" placeholder="Search..." />
+        <button><i class="fas fa-search"></i></button>
+        <div class="searchclosebtn" id="searchclosebtn">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
     <footer>
-     
-      <div class="footer-content"></div>
+      <div class="footer-content">
+        <nav>
+          <ul>
+            <li><a>About Us</a></li>
+            <li><a>Solutions</a></li>
+            <li><a>Why Us</a></li>
+            <li><a>Insights</a></li>
+            <li><a>Contact Us</a></li>
+            <li><a>Log In</a></li>
+            <li><a>Site Map</a></li>
+          </ul>
+        </nav>
+        <div class="certifications">
+          <h5>CERTIFICATIONS</h5>
+          <div class="certiimg">
+            <img
+              class="img1"
+              src="https://worldstarmanpower.ae/wp-content/uploads/2021/08/fc1.png"
+              alt=""
+            />
+            <img
+              class="img2"
+              src="https://worldstarmanpower.ae/wp-content/uploads/2021/08/fc2.png"
+              alt=""
+            />
+          </div>
+          <div class="downandreview">
+            <a class="downloadb"
+              ><i class="fas fa-download"></i>&nbsp;&nbsp;DOWNLOAD BROCHURE</a
+            >
+            <a class="review">REVIEW US ON GOOGLE</a>
+          </div>
+        </div>
+        <div class="contactus">
+          <h5>CONTACT US</h5>
+          <div class="contactlink">
+            <a>Abu Dhabi<br />Tel: +971 2 5545230</a>
+            <a>Abu Dhabi<br />Tel: +971 2 5545230</a>
+            <a>Abu Dhabi<br />Tel: +971 2 5545230</a>
+          </div>
+        </div>
+        <div class="tollfree">
+          <div class="tolllink">
+            <a> Mob: +971566727777</a>
+            <a> Email: inquiry@worldstarmanpower.ae</a>
+          </div>
+          
+        </div>
+      </div>
       <div class="credits">
         &copy; 2021, All Rights Reserved, World Star Manpower.
       </div>

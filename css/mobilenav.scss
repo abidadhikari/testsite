@@ -1,0 +1,27 @@
+.mobile-nav {
+    // display: none;
+    height: 100vh;
+    width: 300px;
+    background-color: black;
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    // transform: translateX(100%);
+    transition: all 0.3s ease;
+    color: #fff;
+    background-image: url(https://worldstarmanpower.ae/wp-content/uploads/2021/09/SG_Pattern_Watermark.jpg);
+  
+    #cross {
+      position: fixed;
+      right: 0;
+      margin: 1.5rem;
+      padding: 5px 8px;
+      border: 1px solid #fff;
+      cursor: pointer;
+    }
+    nav{
+        height: 80vh;
+        padding: 5rem;
+        background-color: aqua;
+    }
+  }
